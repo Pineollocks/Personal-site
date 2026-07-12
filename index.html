@@ -7,36 +7,116 @@
         <meta name="keywords" content="Eathan Teng, personal website, goat">
         <meta name="author" content="Eathan Teng">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="refresh" content="30">
         <link rel="stylesheet" href="style.css">
         <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap">
         <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Press+Start+2P&display=swap" rel="stylesheet">
-
-    
-
-
-
     </head>
     <body> 
         <!--nav bar-->
         <nav class="navbar">
-            <a href="index.html" class="logo">
+            
+            <a href="#opening" class="logo">
                 ET|Eathan Teng
             </a>
 
             
             <ul>
-                <li class="nav_menu_link"><a href="contacts.html">CONTACTS</a></li>
-                <li class="nav_menu_link"><a href="projects.html">PROJECTS</a></li>
-                <li class="nav_menu_link"><a href="about.html">ABOUT</a></li>
+                <li class="nav_menu_link"><a href="#contacts">CONTACTS</a></li>
+                <li class="nav_menu_link"><a href="#projects">PROJECTS</a></li>
+                <li class="nav_menu_link"><a href="#about-me">ABOUT</a></li>
 
             </ul>
             
         </nav>
         <div class="bg"></div>
-        <!--ppp-->
-        <!--comment-->
+        <!--Content Section-->
+        <section id="opening">
+            <div class="opening-container">
+                <h3> -- Eathan Teng | 滕子祺 | Based in Oakville, ON -- </h3>
+                <h1>// Hi, my name </h1>
+                <h1>is Eathan</h1>
+                <h1> I larp to larp,</h1>
+                <h1> and to larp </h1>
+                <h1>is to live //</h1>
+            </div>
+            <div>
+            <a href="#projects" class="btn btn1">VIEW MY WORK <span>&#10230</span></a>
+            </div>
+        </section>
+
+        <section id="about-me">
+            <h3>-- About Me | 关于我 --</h3>
+            <p>My name is Eathan Teng, and I am a grade 11 IB student at WOSS. I'm passionate about coding, STEM, and building innovative solutions through technology. Beyond software, I enjoy working on hardware projects that challenge me to design, build, and learn new technical skills.</p>
+        </section>
+        <section id="projects">
+            <h3>-- My Projects | 我的项目 --</h3>
+            <br>
+            <div class="card-container">
+                <div class="card">
+                    <img src="Images/clublaunch.png" class="card-img">
+                    <div class="card-body">
+                        <h3>Clublaunch</h3>
+                        <p>ClubLaunch is a student-led NPO, that I founded in may of this year.</p>
+                        <a href="javascript:void(0);" class="read-more-btn">Read More</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image-container">
+                    <img src="Images/sentinel.png" alt="Project Image"class="card-img">
+                    </div>
+                    <div class="card-body">
+                        <h3>Sentinel-9</h3>
+                        <p>A hackathon project for HTR 2025, I worked mainly on front end development of the app and web-dev.</p>
+                        <a href="javascript:void(0);" class="read-more-btn">Read More</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="Images/roombot.jpg" class="card-img">
+                    <div class="card-body">
+                        <h3>Roomba Hacking(in progress)</h3>
+                        <p>The Roomba hacking is a small personal project that I'm currently working on, the main goal right now is to connect it to my laptop so I can control it remotely like an RC car.</p>
+                        <div class="extra-content">
+                            <p>I'm rerouting the motors to a motor driver connected to a rasberry pi that I've programmed with some open-source micro-python code that allows me to control it with W-A-S-D for movement.</p>
+                        </div>
+                        <a href="javascript:void(0);" class="read-more-btn">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        
+        <section id="contacts">
+            <h3>-- My Contacts | 我的联系 --</h3>
+            <br>
+            <a>
+            </a>
+
+        </section>
+        <script>
+        // Grab all read more buttons on the page
+            const buttons = document.querySelectorAll('.read-more-btn');
+
+            buttons.forEach(button => {
+                button.addEventListener('click', function() {
+                 // Find the specific card container this button belongs to
+                    const card = this.closest('.card');
+            
+            // Toggle the 'expanded' class on that card
+                    card.classList.toggle('expanded');
+            
+            // Change button text depending on state
+                    if (card.classList.contains('expanded')) {
+                        this.textContent = 'Read Less';
+                    } else {
+                        this.textContent = 'Read More';
+                    }
+                });
+            });
+        </script>
+
+
 
 
 
