@@ -287,3 +287,30 @@ html{
     text-align: center;
     transform:translateY(1000px)
 }
+#contacts .contacts-links{
+    display: inline-flex;
+    flex-direction: column;
+    gap: 16px;
+    text-align: left;
+}
+#contacts a{
+    text-decoration:none;
+    display: flex;
+    align-items: baseline;
+    gap: 20px;
+    padding: 8px 14px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+.C1-label, .C2-label{
+    color:rgb(126,135,165);
+    font-size: 15px;
+    min-width: 80px;
+}
+.C1-value, .C2-value{
+    font-size:25px
+}
+#contacts .C1:hover,
+#contacts .C2:hover{
+    background-color: rgb(35, 41, 60);
+}
